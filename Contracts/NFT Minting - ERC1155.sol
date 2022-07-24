@@ -16,9 +16,14 @@ contract IDEAS is ERC1155, Ownable {
         _mint(msg.sender, IDEA2, 1, "");
         _mint(msg.sender, IDEA3, 1, "");
         _mint(msg.sender, ESGROW , 100*10**18, "");
+        
+
          
          //ADD THE URL
          //USERS OWN THE NFT1155, ESGROW TOKEN 
+    }
+        function setURI(string memory newuri) public onlyOwner {
+        _setURI(newuri);
     }
     
     //Comments for Thanh
@@ -27,5 +32,7 @@ contract IDEAS is ERC1155, Ownable {
     //2. https://gateway.pinata.cloud/ipfs/QmZqxsf4pLWrUZJTUXFD9qE8X9Ze5aUnTBmcKAMmktm72S/Social.png -Social image
     //3. https://gateway.pinata.cloud/ipfs/QmZqxsf4pLWrUZJTUXFD9qE8X9Ze5aUnTBmcKAMmktm72S/Environment.jpeg
     // use brave browser to open the gateway doesn't open on chrome
+    
+// add the URL for each project
 
 }
