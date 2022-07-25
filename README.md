@@ -1,4 +1,4 @@
-# TRON HACKATHON
+# Polygon BUIDL IT : Summer 2022
 # ESG ( ENVRONMENTAL, SOCIAL, AND GOVERNANCE) PROJECTS
 **ESGROW**
 ---
@@ -21,8 +21,8 @@ Sustainable finance – the integration of environmental, social, and governance
 ## Participation conditions
 
 - Each participant will be allowed to submit only one project. 
-- Maximum number of accepted projects is 30. 
-- Community will vote to choose 10 out of 20 projects.
+- Maximum number of accepted projects is 50. 
+- Community will vote to choose 10 out of 50 projects.
 - Each token holder has 2 votes
 - Batches: 3-4 batches/year
 

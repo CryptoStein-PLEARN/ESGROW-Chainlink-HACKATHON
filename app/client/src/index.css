@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'TTNormsBold';
+    src: local('TTNormsBold'), url(./fonts/TTNorms-Bold.otf) format('woff');
+}
+
+@font-face {
+    font-family: 'TTNormsMedium';
+    src: local('TTNormsMedium'), url(./fonts/TTNorms-Medium.otf) format('woff');
+}
+
+@font-face {
+    font-family: "TTNormsRegular";
+    src: local('TTNormsRegular'), url(./fonts/TTNorms-Regular.otf) format('woff');
+}
+
+/** Global Css Variables **/
+:root {
+    --default: #AFD9D5;
+    --black: #000000;
+    --black1: #3A3A3A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "TTNormsRegular", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: #00000000;
+    -webkit-tap-highlight-color: #0000;
+}
+
+/*===== Root =====*/
+#root {
+    background-color: var(--silver);
+    max-width: 1600px;
+}
+
+body {
+    background-color: var(--default);
+}
+
+.es-bold-font {
+    font-family: "TTNormsBold";
+}
+
+.es-bold-font {
+    font-family: "TTNormsMedium";
+}
+
+.es-nav-container {}
+
+.es-container {}
+
+.es-grow {
+    width: 350px;
+    height: 350px;
+}
+
+@media (min-width: 820px) {
+    .es-grow {
+        width: 550px;
+        height: 550px;
+    }
+}
+
+@media screen and (min-width: 912px) {
+    body {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .es-grow {
+        width: 610px;
+        height: 610px;
+    }
+
+    .es-nav-container {}
+
+    .es-container {
+        max-width: 1250px;
+        width: 1250px;
+    }
+}

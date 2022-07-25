@@ -1,0 +1,33 @@
+{
+  "name": "esgrow",
+  "version": "1.0.0",
+  "description": "ESG ( ENVRONMENTAL, SOCIAL, AND GOVERNANCE) PROJECTS",
+  "scripts": {
+    "start": "node ./bin/www",
+    "client": "npm start --prefix app/client",
+    "server": "nodemon app/server",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PLEARN-ESG/ESGROW.git"
+  },
+  "author": "CryptoStein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PLEARN-ESG/ESGROW/issues"
+  },
+  "homepage": "https://github.com/PLEARN-ESG/ESGROW#readme",
+  "dependencies": {
+    "concurrently": "^7.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.5.0",
+    "mongoose": "^6.4.6"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.19"
+  }
+}
