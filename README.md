@@ -82,37 +82,4 @@ People can submit their idea/project through a form.
      Users can acquire MANI either through buying it directly from the platform, or through the completion of the learning process when they play PLEARN.
      Only users who hold MANI can participate in submitting/voting process
 
-PLEARN
 
----
-## This project was built using:
-
- ---
-## Prerequisites
-
-
----
-## Directory Structure  
-
-
----
-## Dependencies
-
-
-
----
-## User Interaction flow:
-
-
-
-
----
-## Running the Project
-
-
-## Testing the Solution 
-`
-
-
-  
-  
