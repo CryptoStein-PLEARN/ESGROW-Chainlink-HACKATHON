@@ -316,7 +316,7 @@ Install dependencies with npm
 Clone the project
 
 ```bash
-  git clone https://github.com/PLEARN-ESG/ESGROW-WEB3ATHON-HACKATHON
+  git clone https://github.com/CryptoStein-PLEARN/ESGROW-TRON-HACKATHON/blob/main/README.md
 ```
 
 Go to the project directory
