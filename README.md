@@ -391,8 +391,8 @@ To deploy this project run
 
 ## :link: Useful Links
 
-- ## :scroll: ESGROW Whitepaper
-  https://docs.google.com/document/d/1ZedT_0I0fYZfjVtB40jHcq34vyVQoDChz5FgUk1LH0Q/edit#
+- ## :scroll: ESGROW Whitepaper - still in progress
+ 
   <!-- Demo -->
 - ## :cinema: Demo
   [https://www.youtube.com/watch?v=VwvrdoV2_Bs](https://www.youtube.com/watch?v=dsP6ogSsLFM)
