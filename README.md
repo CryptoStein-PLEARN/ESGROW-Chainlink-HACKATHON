@@ -277,13 +277,6 @@ To run ESGROW, you will need to add the following environment variables to your 
 
 ---
 
-<!-- Why Filecoin, Polygon, and IPFS? -->
-
-### :interrobang: Why Filecoin, Polygon, and IPFS?
-
-Combining Filecoin’s durability and Polygon’s scalability opened a lot of opportunities for start-ups. As PLEARN is a play-to-earn (P2E) game that has NFT marketplace, we have also chosen to use IPFS for content addressing and Filecoin for provable and decentralized storage to store metadata with rich media such as videos.
-Since ESGROW platform requires a large, reliable, and long-term storage for the NFT and images used for minting, therefore, Filecoin was chosen as a storage for its durability and affordable price for start-up. The images used for the NFT marketplace are stored on IPFS and Filecoin storage. Furthermore, Filecoin and Polygon bridge partnership in February 2022 created a great combination for development of gaming, NFT, and metaverse platforms such as ESGROW, and PLEARN in the future. Finally, Filecoin’s use case in developing financial tools, supporting the storage of crypto wallets, financial apps, is suitable for financial literacy apps like PLEARN.
-
 <!-- Getting Started -->
 
 ## :toolbox: Getting Started
@@ -378,11 +371,14 @@ To deploy this project run
 ## :wave: Team
 
 | Member        | Title             | Description                                 | Linkedin                                               | GitHub                |
-| ------------- | ----------------- | ------------------------------------------- | ------------------------------------------------------ | --------------------- |
+| ------------- | ----------------- | ------------------------------------------- | ------------------------------------------------------ | ----------- |
 | Nada Jabr     | Project Leader    | Manage project content                      | https://www.linkedin.com/in/nada-jabr-15838b39/        | NJ-2021 - CryptoStein |
 | Paul Oamen    | Technical Advisor | Advise on front-end and back-end technicals | https://www.linkedin.com/in/paule-oamen/               | AgentPoles            |
-| Beshoy        | Tech Lead         | Coordinate the project technicals           | https://https://www.linkedin.com/in/beshoy//           | 0xBeshoy              |
-| ujjwal-webdev | Game developer    | Designing the game board                    | https://www.linkedin.com/in/ujjwal-sachdeva-5064651b4/ | ujjwal-webdev         |
+| Beshoy Shehata| Tech Lead         | Coordinate the project technicals           | https://https://www.linkedin.com/in/beshoy//           | 0xBeshoy              |
+| ujjwal-webdev | Game developer    | Designing the game board                    | https://www.linkedin.com/in/ujjwal-sachdeva-5064651b4/ | ujjwal-webdev
+|  
+| Sanskar-tyagi | Front-End Deve.   | ESGROW front-end desing                     | https://www.linkedin.com/in/sanskar-tyagi-953a921b1/   | Sanskar-tyagi|
+  
 
 <!-- Contact -->
 
@@ -396,7 +392,7 @@ To deploy this project run
 ## :link: Useful Links
 
 - ## :scroll: ESGROW Whitepaper
-  https://docs.google.com/document/d/1ptxKjc9xCLl-hFa4aBdV1O0txK1vv3k70nsGmFG0eOE/edit
+  https://docs.google.com/document/d/1ZedT_0I0fYZfjVtB40jHcq34vyVQoDChz5FgUk1LH0Q/edit#
   <!-- Demo -->
 - ## :cinema: Demo
   [https://www.youtube.com/watch?v=VwvrdoV2_Bs](https://www.youtube.com/watch?v=dsP6ogSsLFM)
