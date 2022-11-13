@@ -43,6 +43,7 @@
 
 body {
     background-color: var(--default);
+    position: relative;
 }
 
 .es-bold-font {
@@ -53,13 +54,108 @@ body {
     font-family: "TTNormsMedium";
 }
 
-.es-nav-container {}
-
-.es-container {}
-
 .es-grow {
     width: 350px;
     height: 350px;
+}
+
+.custom-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: var(--default);
+}
+
+.nav-menu {
+    display: flex;
+    height: 0%;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.nav-menu.show {
+    transition: all 200ms ease-in-out;
+    width: 100%;
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    padding: 4px 32px;
+    z-index: 1;
+    background-color: white;
+    height: 80%;
+    visibility: visible;
+    transition-timing-function: linear;
+}
+
+.fix-later {
+    display: none;
+}
+
+.nav-menu.show ul {
+    padding: 3rem 1rem;
+}
+
+.nav-menu.show li {
+    font-family: TTNormsMedium;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    color: #000;
+    font-weight: bold;
+}
+
+.custom-nav .logo {}
+
+.custom-nav .nav-menu {}
+
+@media (min-width: 768px) {
+
+    .menu-btn,
+    .hide-btn {
+        display: none;
+    }
+
+    .fix-later {
+        display: inline-block;
+    }
+
+    header.custom-header {
+        height: 5rem;
+        position: relative;
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    .nav-menu {
+        position: relative;
+        visibility: visible;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    .nav-menu ul {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .nav-menu li {
+        margin-right: 1rem;
+        color: #fff;
+        font-weight: medium;
+    }
+
+    .btn-connect {
+        background-color: #fff;
+        color: var(--default);
+    }
 }
 
 @media (min-width: 820px) {
@@ -81,10 +177,28 @@ body {
         height: 610px;
     }
 
-    .es-nav-container {}
-
     .es-container {
         max-width: 1250px;
         width: 1250px;
     }
+}
+.column {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  #a{
+    display: flex;
+    justify-content: right;
+  }
+p.a{
+    text-size-adjust: 3px;
 }
