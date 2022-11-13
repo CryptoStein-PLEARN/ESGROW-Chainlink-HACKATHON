@@ -95,7 +95,7 @@ https://esgrow-web-3-athon.vercel.app/
 
 <div align="center"> 
  
-<img width="933" alt="image" src="https://user-images.githubusercontent.com/107268440/190730273-3a5183c7-f98c-4ac0-8fae-cf5939bf983d.png">
+<img width="898" alt="image" src="https://user-images.githubusercontent.com/107268440/201532442-aad0303d-f678-46a5-882e-80bdb38da847.png">
 
 </div>
 
@@ -250,7 +250,7 @@ ESGROW will be part of a bigger project, **PLEARN**, which is a game aims at tea
   Users can acquire MANI either through buying it directly from the platform, or through the completion of the learning process when they play PLEARN.
   Only users who hold MANI can participate in submitting/voting process. We will airdrop users with two tokens in order to partipiate in both the submission and the voting process. However, these tokens can be used to vote twice, including their own project.
 
-  <img width="3702" alt="ESGROW-9" src="https://user-images.githubusercontent.com/107268440/201530712-00e70fe9-d02d-4c60-994b-7447c6003693.png">
+<img width="3702" alt="ESGROW-9" src="https://user-images.githubusercontent.com/107268440/201530712-00e70fe9-d02d-4c60-994b-7447c6003693.png">
 
 
 ---
