@@ -250,7 +250,8 @@ ESGROW will be part of a bigger project, **PLEARN**, which is a game aims at tea
   Users can acquire MANI either through buying it directly from the platform, or through the completion of the learning process when they play PLEARN.
   Only users who hold MANI can participate in submitting/voting process. We will airdrop users with two tokens in order to partipiate in both the submission and the voting process. However, these tokens can be used to vote twice, including their own project.
 
-  <img width="3666" alt="ESGROW-2" src="https://user-images.githubusercontent.com/107268440/182330039-abe56a43-b778-473f-a109-26fc41f4cd5d.png">
+  <img width="3702" alt="ESGROW-9" src="https://user-images.githubusercontent.com/107268440/201530712-00e70fe9-d02d-4c60-994b-7447c6003693.png">
+
 
 ---
 
