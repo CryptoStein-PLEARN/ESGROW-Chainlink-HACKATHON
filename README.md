@@ -94,8 +94,10 @@ https://esgrow-web-3-athon.vercel.app/
 ### :camera: Screenshots
 
 <div align="center"> 
- 
-<img width="898" alt="image" src="https://user-images.githubusercontent.com/107268440/201532442-aad0303d-f678-46a5-882e-80bdb38da847.png">
+
+<img width="844" alt="Screenshot 2022-11-15 at 23 13 37" src="https://user-images.githubusercontent.com/107268440/202037097-18c71782-cad5-474b-b64e-02a8d77b5972.png">
+
+
 
 </div>
 
@@ -370,15 +372,12 @@ To deploy this project run
 
 ## :wave: Team
 
-| Member        | Title             | Description                                 | Linkedin                                               | GitHub                |
-| ------------- | ----------------- | ------------------------------------------- | ------------------------------------------------------ | ----------- |
-| Nada Jabr     | Project Leader    | Manage project content                      | https://www.linkedin.com/in/nada-jabr-15838b39/        | NJ-2021 - CryptoStein |
-| Paul Oamen    | Technical Advisor | Advise on front-end and back-end technicals | https://www.linkedin.com/in/paule-oamen/               | AgentPoles            |
-| Beshoy Shehata| Tech Lead         | Coordinate the project technicals           | https://https://www.linkedin.com/in/beshoy//           | 0xBeshoy              |
-| ujjwal-webdev | Game developer    | Designing the game board                    | https://www.linkedin.com/in/ujjwal-sachdeva-5064651b4/ | ujjwal-webdev
-|  
-| Sanskar-tyagi | Front-End Deve.   | ESGROW front-end desing                     | https://www.linkedin.com/in/sanskar-tyagi-953a921b1/   | Sanskar-tyagi|
-  
+| Nada Jabr      	| Project Leader  	| Manage project content            	| https://www.linkedin.com/in/nada-jabr-15838b39/        	| NJ-2021 - CryptoStein 	|
+|----------------	|-----------------	|-----------------------------------	|--------------------------------------------------------	|-----------------------	|
+| Beshoy Shehata 	| Tech Lead       	| Coordinate the project technicals 	| https://www.linkedin.com/in/beshoy//                   	| 0xBeshoy              	|
+| Ujjwal-webdev  	| Game developer  	| Designing the game board          	| https://www.linkedin.com/in/ujjwal-sachdeva-5064651b4/ 	| ujjwal-webdev         	|
+| Sanskar-tyagi  	| Front-End Deve. 	| ESGROW front-end desing           	| https://www.linkedin.com/in/sanskar-tyagi-953a921b1/   	| Sanskar-tyagi         	|
+| Rawan Mohsen   	| Product Owner   	| Team coordinator                  	| https://www.linkedin.com/in/rawan-mohsen-74563718b/    	| rawanmo7sen           	|
 
 <!-- Contact -->
 
