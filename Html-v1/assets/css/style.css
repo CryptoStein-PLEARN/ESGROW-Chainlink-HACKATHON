@@ -20593,7 +20593,7 @@ h6,
   background: linear-gradient(45deg, #08AEEA 0%, #2AF598 100%);
 }
 .underline-gradient-7:after {
-  background: linear-gradient(100deg, #0093e9 0, #80d0c7 95%);
+  background: linear-gradient(100deg, #0093e9 0, #017440 95%);
 }
 .underline-gradient-8:after {
   background: linear-gradient(45deg, #ffdee9, #b5fffc);
@@ -27228,11 +27228,11 @@ button:focus {
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(45deg, #08AEEA 0%, #2AF598 100%);
 }
 .gradient-7 {
-  background-image: linear-gradient(100deg, #0093e9 0, #80d0c7 95%);
+  background-image:  linear-gradient(45deg, #34c9ff 0%, #017440 100%);
 }
 .gradient-7.btn-outline-gradient,
 .gradient-7.btn-outline-gradient span {
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(100deg, #0093e9 0, #80d0c7 95%);
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(100deg,  #34c9ff 0, #017440 95%);
 }
 .gradient-8 {
   background-image: linear-gradient(45deg, #ffdee9, #b5fffc);
@@ -35982,7 +35982,7 @@ figure.overlay img {
   background: linear-gradient(45deg, #08AEEA 0%, #2AF598 100%);
 }
 .overlay.overlay-gradient-7 span.bg {
-  background: linear-gradient(100deg, #0093e9 0, #80d0c7 95%);
+  background: linear-gradient(100deg, #34c9ff 0, #017440 95%);
 }
 .overlay.overlay-gradient-8 span.bg {
   background: linear-gradient(45deg, #ffdee9, #b5fffc);
