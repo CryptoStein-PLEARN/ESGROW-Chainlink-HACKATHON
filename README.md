@@ -347,9 +347,9 @@ To deploy this project run
 ## :exploding_head: Smart Contracts
 
 - **NFT Minting Contract Address (ERC115):**
-- 0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
+- 0xb81449C4362adb2850a385f03B54207c9eA33319
 - **Marketplace Contract address:**
-- 0xbADDE1C2caa34F681515A2d221d1Bb7Af41C2E99
+- 0x7830ee252b702C5E0fdCB55E2EDE71495383CC83
 - **Management Contract Address:**
 - 0x9Ffe65ca50985eE803cA8C03D4848C979604f459
 - **MANI Contract Address:**
