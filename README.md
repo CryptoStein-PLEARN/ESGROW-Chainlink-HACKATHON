@@ -117,9 +117,6 @@ https://esgrow-web-3-athon.vercel.app/
 <details>
 <summary>Database</summary>
   <ul>
-  <li><a href="https://aws.amazon.com/">Amazon DynamoDB</a></li>
-  </ul>
-</details>
 
 <details>
 <summary>Backend</summary>
@@ -138,18 +135,7 @@ https://esgrow-web-3-athon.vercel.app/
 </details>
   
   <details>
-<summary>AWS Tools</summary>
-    
-  - Amazon Elastic Compute Cloud (EC2)
-    
-  - AWS Identity and Access Management (IAM)
-    
-  - AWS Elastic Beanstalk
-    
-  - Legal Entity Identifier (LEI)
-    
-  - Legal Entity Reference Data (LE-RD)
-    <ul> 
+ 
 </details>
     
   <details>
