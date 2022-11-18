@@ -4,11 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Template</title>
+  <title>ESGROW</title>
   <link rel="stylesheet" href="./assets/css/plugins.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/colors/green.css">
   <link rel="preload" href="./assets/css/fonts/urbanist.css" as="style" onload="this.rel='stylesheet'">
+
+  <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
 </head>
 
 <body>
@@ -34,7 +36,7 @@
                     AIRDROP WHITELIST</a>
                 </li>
                 <li class="nav-item  ">
-                  <a class="nav-link " href="#"  >
+                  <a class="nav-link " href="Marketplace.html">
                     MARKETPLACE</a>
                 </li>
                 <li class="nav-item  ">
@@ -52,7 +54,8 @@
           <div class="navbar-other ms-lg-4">
             <ul class="navbar-nav flex-row align-items-center ms-auto">
               <li class="nav-item d-none d-md-block">
-                <a href="#" class="btn btn-sm btn-primary rounded">Connect-wallet</a>
+                <!-- <a href="#" class="btn btn-sm btn-primary rounded">Connect-wallet</a> -->
+                <button class="btn btn-sm btn-primary rounded" onclick="connectWallet()">Connect Wallet</button>
               </li>
             
             </ul>
@@ -694,6 +697,7 @@
   </div>
   <script src="./assets/js/plugins.js"></script>
   <script src="./assets/js/theme.js"></script>
+  <script src="./assets/js/marketplace.js"></script>
 </body>
 
 </html>
