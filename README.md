@@ -114,9 +114,6 @@ https://esgrow-web-3-athon.vercel.app/
   </ul>
 </details>
 
-<details>
-<summary>Database</summary>
-  <ul>
 
 <details>
 <summary>Backend</summary>
