@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-artifact-1",
   "contractName": "IManagement",
-  "sourceName": "Contracts/interfaces/IManagement.sol",
+  "sourceName": "contracts/interfaces/IManagement.sol",
   "abi": [
     {
       "anonymous": false,

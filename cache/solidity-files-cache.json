@@ -1,10 +1,10 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/Contracts/interfaces/IManagement.sol": {
-      "lastModificationDate": 1663535439706,
-      "contentHash": "278de7a0ef84ada98747f2313d151207",
-      "sourceName": "Contracts/interfaces/IManagement.sol",
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/contracts/MANIToken.sol": {
+      "lastModificationDate": 1668700883879,
+      "contentHash": "2e8c488318384b54c628ed34098d0b94",
+      "sourceName": "contracts/MANIToken.sol",
       "solcConfig": {
         "version": "0.8.9",
         "settings": {
@@ -28,18 +28,22 @@
           }
         }
       },
-      "imports": [],
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "@chainlink/contracts/src/v0.8/KeeperCompatible.sol",
+        "./interfaces/IMani.sol"
+      ],
       "versionPragmas": [
-        ">=0.7.0 <0.9.0"
+        "^0.8.9"
       ],
       "artifacts": [
-        "IManagement"
+        "MANI"
       ]
     },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/Contracts/interfaces/IMani.sol": {
-      "lastModificationDate": 1663535439706,
-      "contentHash": "be1b0db663bf18525e83b466534b3eac",
-      "sourceName": "Contracts/interfaces/IMani.sol",
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/contracts/interfaces/IMani.sol": {
+      "lastModificationDate": 1668700888108,
+      "contentHash": "faffb38493cd8c572c7c9aaf0d25dac1",
+      "sourceName": "contracts/interfaces/IMani.sol",
       "solcConfig": {
         "version": "0.8.9",
         "settings": {
@@ -67,231 +71,14 @@
         "@openzeppelin/contracts/token/ERC20/IERC20.sol"
       ],
       "versionPragmas": [
-        "^0.8.1"
+        "^0.8.9"
       ],
       "artifacts": [
         "IMani"
       ]
     },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
-      "lastModificationDate": 1663535928157,
-      "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
-      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC20"
-      ]
-    },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/Contracts/NewManagement.sol": {
-      "lastModificationDate": 1663535439706,
-      "contentHash": "02b49eb0110d8c7cac86ce6884353750",
-      "sourceName": "Contracts/NewManagement.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../utils/Context.sol",
-        "@openzeppelin/contracts/utils/Counters.sol",
-        "@openzeppelin/contracts/utils/Strings.sol",
-        "@openzeppelin/contracts/utils/math/SafeMath.sol",
-        "./interfaces/IMani.sol",
-        "@chainlink/contracts/src/v0.8/KeeperCompatible.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.1"
-      ],
-      "artifacts": [
-        "NewManagement"
-      ]
-    },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/utils/Context.sol": {
-      "lastModificationDate": 1663535439774,
-      "contentHash": "20d1d6e92ff8f00702652e7c62cfc8e9",
-      "sourceName": "utils/Context.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.1"
-      ],
-      "artifacts": [
-        "Context"
-      ]
-    },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/node_modules/@openzeppelin/contracts/utils/Counters.sol": {
-      "lastModificationDate": 1663535927534,
-      "contentHash": "74654e3ae5d7f39555055dfe244dab7a",
-      "sourceName": "@openzeppelin/contracts/utils/Counters.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Counters"
-      ]
-    },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
-      "lastModificationDate": 1663535928338,
-      "contentHash": "cf46906c4035f51639a22265066a9e78",
-      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Strings"
-      ]
-    },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/node_modules/@openzeppelin/contracts/utils/math/SafeMath.sol": {
-      "lastModificationDate": 1663535928321,
-      "contentHash": "2337f0279507b5edf14a07067adf0d05",
-      "sourceName": "@openzeppelin/contracts/utils/math/SafeMath.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "SafeMath"
-      ]
-    },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/node_modules/@chainlink/contracts/src/v0.8/KeeperCompatible.sol": {
-      "lastModificationDate": 1663535928298,
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/node_modules/@chainlink/contracts/src/v0.8/KeeperCompatible.sol": {
+      "lastModificationDate": 1668701278837,
       "contentHash": "c153645393332a62a1e73cb0d5a6162c",
       "sourceName": "@chainlink/contracts/src/v0.8/KeeperCompatible.sol",
       "solcConfig": {
@@ -328,118 +115,9 @@
         "KeeperCompatible"
       ]
     },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/node_modules/@chainlink/contracts/src/v0.8/KeeperBase.sol": {
-      "lastModificationDate": 1663535928297,
-      "contentHash": "216a5d4c261e07cc7b31f828950e35ad",
-      "sourceName": "@chainlink/contracts/src/v0.8/KeeperBase.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "KeeperBase"
-      ]
-    },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/node_modules/@chainlink/contracts/src/v0.8/interfaces/KeeperCompatibleInterface.sol": {
-      "lastModificationDate": 1663535929010,
-      "contentHash": "bdbf3e274e50272d9c830fa414fcbec9",
-      "sourceName": "@chainlink/contracts/src/v0.8/interfaces/KeeperCompatibleInterface.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "KeeperCompatibleInterface"
-      ]
-    },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/Contracts/MANIToken.sol": {
-      "lastModificationDate": 1663535439705,
-      "contentHash": "c1b29b246a0ec243a93eceaa4ce32b52",
-      "sourceName": "Contracts/MANIToken.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        "@chainlink/contracts/src/v0.8/KeeperCompatible.sol",
-        "./interfaces/IMani.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.1"
-      ],
-      "artifacts": [
-        "MANI"
-      ]
-    },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
-      "lastModificationDate": 1663535927797,
-      "contentHash": "af7bd64e1cfefbf6cb07f2adc1a25392",
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1668701272384,
+      "contentHash": "834a0dde221759af42b030253315b086",
       "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
       "solcConfig": {
         "version": "0.8.9",
@@ -476,8 +154,148 @@
         "ERC20"
       ]
     },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
-      "lastModificationDate": 1663535928161,
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1668701277924,
+      "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/node_modules/@chainlink/contracts/src/v0.8/KeeperBase.sol": {
+      "lastModificationDate": 1668701278834,
+      "contentHash": "216a5d4c261e07cc7b31f828950e35ad",
+      "sourceName": "@chainlink/contracts/src/v0.8/KeeperBase.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "KeeperBase"
+      ]
+    },
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/node_modules/@chainlink/contracts/src/v0.8/interfaces/KeeperCompatibleInterface.sol": {
+      "lastModificationDate": 1668701279893,
+      "contentHash": "bdbf3e274e50272d9c830fa414fcbec9",
+      "sourceName": "@chainlink/contracts/src/v0.8/interfaces/KeeperCompatibleInterface.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "KeeperCompatibleInterface"
+      ]
+    },
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1668701269091,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+      "lastModificationDate": 1668701277968,
       "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
       "solcConfig": {
@@ -513,10 +331,124 @@
         "IERC20Metadata"
       ]
     },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/node_modules/@openzeppelin/contracts/utils/Context.sol": {
-      "lastModificationDate": 1663535927530,
-      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
-      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/contracts/NewManagement.sol": {
+      "lastModificationDate": 1668700851116,
+      "contentHash": "b2ebb16d5c3f02596ff14ae564a572c7",
+      "sourceName": "contracts/NewManagement.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol",
+        "@openzeppelin/contracts/utils/Counters.sol",
+        "@openzeppelin/contracts/utils/Strings.sol",
+        "@openzeppelin/contracts/utils/math/SafeMath.sol",
+        "./interfaces/IMani.sol",
+        "@chainlink/contracts/src/v0.8/KeeperCompatible.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "NewManagement"
+      ]
+    },
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/utils/Context.sol": {
+      "lastModificationDate": 1668700951615,
+      "contentHash": "e45a3afee80f23409a673d6d2b4acd39",
+      "sourceName": "utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1668701278791,
+      "contentHash": "396031251978f8febfd90cb62cb240ec",
+      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./math/Math.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
+    },
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/node_modules/@openzeppelin/contracts/utils/Counters.sol": {
+      "lastModificationDate": 1668701269108,
+      "contentHash": "74654e3ae5d7f39555055dfe244dab7a",
+      "sourceName": "@openzeppelin/contracts/utils/Counters.sol",
       "solcConfig": {
         "version": "0.8.9",
         "settings": {
@@ -545,12 +477,202 @@
         "^0.8.0"
       ],
       "artifacts": [
-        "Context"
+        "Counters"
       ]
     },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/node_modules/@openzeppelin/contracts/token/ERC1155/ERC1155.sol": {
-      "lastModificationDate": 1663535927647,
-      "contentHash": "9be05ac5a08ad0370e3cc36665ca490c",
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/node_modules/@openzeppelin/contracts/utils/math/SafeMath.sol": {
+      "lastModificationDate": 1668701278773,
+      "contentHash": "2337f0279507b5edf14a07067adf0d05",
+      "sourceName": "@openzeppelin/contracts/utils/math/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/node_modules/@openzeppelin/contracts/utils/math/Math.sol": {
+      "lastModificationDate": 1668701278599,
+      "contentHash": "b9c58920ce74d6dc819161786112e7ee",
+      "sourceName": "@openzeppelin/contracts/utils/math/Math.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Math"
+      ]
+    },
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/contracts/Management.sol": {
+      "lastModificationDate": 1668700882858,
+      "contentHash": "98c11f60be3ccc5b392380ccdc5138f1",
+      "sourceName": "contracts/Management.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol",
+        "@openzeppelin/contracts/utils/Counters.sol",
+        "@openzeppelin/contracts/utils/Strings.sol",
+        "@openzeppelin/contracts/utils/math/SafeMath.sol",
+        "./interfaces/IMani.sol",
+        "@chainlink/contracts/src/v0.8/KeeperCompatible.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "Management"
+      ]
+    },
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/contracts/MintingAndBuying.sol": {
+      "lastModificationDate": 1668700743004,
+      "contentHash": "049352ace6ba8e6994c4d1849a1bc779",
+      "sourceName": "contracts/MintingAndBuying.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC1155/ERC1155.sol",
+        "@openzeppelin/contracts/utils/Counters.sol",
+        "@openzeppelin/contracts/token/ERC1155/IERC1155.sol",
+        "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "EsgrowNfts",
+        "NFTMarketplace"
+      ]
+    },
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/node_modules/@openzeppelin/contracts/token/ERC1155/IERC1155.sol": {
+      "lastModificationDate": 1668701277158,
+      "contentHash": "d5a8f6e07ca38ec384856cfe9f08a867",
+      "sourceName": "@openzeppelin/contracts/token/ERC1155/IERC1155.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC1155"
+      ]
+    },
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/node_modules/@openzeppelin/contracts/token/ERC1155/ERC1155.sol": {
+      "lastModificationDate": 1668701271158,
+      "contentHash": "447816f3d93d639006eb423c33d2ca2c",
       "sourceName": "@openzeppelin/contracts/token/ERC1155/ERC1155.sol",
       "solcConfig": {
         "version": "0.8.9",
@@ -590,10 +712,10 @@
         "ERC1155"
       ]
     },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/node_modules/@openzeppelin/contracts/token/ERC1155/IERC1155.sol": {
-      "lastModificationDate": 1663535928068,
-      "contentHash": "d5a8f6e07ca38ec384856cfe9f08a867",
-      "sourceName": "@openzeppelin/contracts/token/ERC1155/IERC1155.sol",
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/node_modules/@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol": {
+      "lastModificationDate": 1668701271406,
+      "contentHash": "88079762e28b246888129028f757e047",
+      "sourceName": "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol",
       "solcConfig": {
         "version": "0.8.9",
         "settings": {
@@ -618,17 +740,87 @@
         }
       },
       "imports": [
-        "../../utils/introspection/IERC165.sol"
+        "./ERC1155Receiver.sol"
       ],
       "versionPragmas": [
         "^0.8.0"
       ],
       "artifacts": [
-        "IERC1155"
+        "ERC1155Holder"
       ]
     },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/node_modules/@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol": {
-      "lastModificationDate": 1663535928080,
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1668701277693,
+      "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
+    },
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/node_modules/@openzeppelin/contracts/utils/Address.sol": {
+      "lastModificationDate": 1668701268540,
+      "contentHash": "f31ad6fc4bbf9c06203987220156a6ba",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.1"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/node_modules/@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol": {
+      "lastModificationDate": 1668701277447,
       "contentHash": "9f8822b72fe2702979e40160cb6d9636",
       "sourceName": "@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol",
       "solcConfig": {
@@ -664,80 +856,8 @@
         "IERC1155Receiver"
       ]
     },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/node_modules/@openzeppelin/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol": {
-      "lastModificationDate": 1663535928077,
-      "contentHash": "9148c2e10c4efb12c71a7f080da5559b",
-      "sourceName": "@openzeppelin/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../IERC1155.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC1155MetadataURI"
-      ]
-    },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/node_modules/@openzeppelin/contracts/utils/Address.sol": {
-      "lastModificationDate": 1663535927466,
-      "contentHash": "c476b3895a94798b88a4bb97399e6dfe",
-      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.1"
-      ],
-      "artifacts": [
-        "Address"
-      ]
-    },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
-      "lastModificationDate": 1663535927758,
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+      "lastModificationDate": 1668701271831,
       "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
       "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
       "solcConfig": {
@@ -773,10 +893,10 @@
         "ERC165"
       ]
     },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
-      "lastModificationDate": 1663535928137,
-      "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
-      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/node_modules/@openzeppelin/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol": {
+      "lastModificationDate": 1668701277359,
+      "contentHash": "9148c2e10c4efb12c71a7f080da5559b",
+      "sourceName": "@openzeppelin/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol",
       "solcConfig": {
         "version": "0.8.9",
         "settings": {
@@ -800,16 +920,18 @@
           }
         }
       },
-      "imports": [],
+      "imports": [
+        "../IERC1155.sol"
+      ],
       "versionPragmas": [
         "^0.8.0"
       ],
       "artifacts": [
-        "IERC165"
+        "IERC1155MetadataURI"
       ]
     },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/node_modules/@openzeppelin/contracts/token/ERC1155/utils/ERC1155Receiver.sol": {
-      "lastModificationDate": 1663535927738,
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/node_modules/@openzeppelin/contracts/token/ERC1155/utils/ERC1155Receiver.sol": {
+      "lastModificationDate": 1668701271654,
       "contentHash": "55b180cf664783e9a2baac20e82683fb",
       "sourceName": "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Receiver.sol",
       "solcConfig": {
@@ -846,10 +968,10 @@
         "ERC1155Receiver"
       ]
     },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/Contracts/MintingAndBuying.sol": {
-      "lastModificationDate": 1663535439706,
-      "contentHash": "921330c5ffe664d20db7043124511081",
-      "sourceName": "Contracts/MintingAndBuying.sol",
+    "/Users/khawlaalaa/github/ESGROW-Chainlink-HACKATHON/contracts/interfaces/IManagement.sol": {
+      "lastModificationDate": 1668700900261,
+      "contentHash": "24c7bd7fa08e1ac7d21539cad054fa17",
+      "sourceName": "contracts/interfaces/IManagement.sol",
       "solcConfig": {
         "version": "0.8.9",
         "settings": {
@@ -873,97 +995,12 @@
           }
         }
       },
-      "imports": [
-        "@openzeppelin/contracts/token/ERC1155/ERC1155.sol",
-        "@openzeppelin/contracts/utils/Counters.sol",
-        "@openzeppelin/contracts/token/ERC1155/IERC1155.sol",
-        "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol"
-      ],
+      "imports": [],
       "versionPragmas": [
         "^0.8.9"
       ],
       "artifacts": [
-        "EsgrowNfts",
-        "NFTMarketplace"
-      ]
-    },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/node_modules/@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol": {
-      "lastModificationDate": 1663535927722,
-      "contentHash": "88079762e28b246888129028f757e047",
-      "sourceName": "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./ERC1155Receiver.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC1155Holder"
-      ]
-    },
-    "/Users/apple/Documents/Github/ESGROW-WEB3ATHON-HACKATHON/Contracts/Management.sol": {
-      "lastModificationDate": 1663535439705,
-      "contentHash": "25ac52a77e020f7ef78eef795d953aee",
-      "sourceName": "Contracts/Management.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../utils/Context.sol",
-        "@openzeppelin/contracts/utils/Counters.sol",
-        "@openzeppelin/contracts/utils/Strings.sol",
-        "@openzeppelin/contracts/utils/math/SafeMath.sol",
-        "./interfaces/IMani.sol",
-        "@chainlink/contracts/src/v0.8/KeeperCompatible.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.1"
-      ],
-      "artifacts": [
-        "Management"
+        "IManagement"
       ]
     }
   }

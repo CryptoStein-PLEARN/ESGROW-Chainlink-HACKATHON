@@ -10,6 +10,9 @@ import "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol";
 // import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract EsgrowNfts is ERC1155 {
+    using Counters for Counters.Counter;
+    Counters.Counter private proposalId;
+
     uint256 public constant IDEA1 = 0;
     uint256 public constant IDEA2 = 1;
     uint256 public constant IDEA3 = 2;
@@ -36,6 +39,18 @@ contract EsgrowNfts is ERC1155 {
     address tokenAddress;
     mapping(uint256 => string) private nftUris;
     address private superAdmin;
+
+    struct Proposal {
+        uint256 id;
+        string name;
+        uint256 time;
+        string url;
+    }
+
+    mapping(uint256 => Proposal) proposals;
+    mapping(address => uint256) ownerToProposal;
+    mapping(address => bool) submittedProposal;
+    mapping(uint256 => bool) approvedProposal;
 
     modifier onlySuperAdmin() {
         require(msg.sender == superAdmin, " not authorized");
@@ -76,7 +91,7 @@ contract EsgrowNfts is ERC1155 {
         public
         onlySuperAdmin
     {
-        require(bytes(newuri).length == 0, "uri already assisgned");
+        require(bytes(newuri).length != 0, "uri already assisgned");
         nftUris[tokenId] = newuri;
     }
 
@@ -93,12 +108,51 @@ contract EsgrowNfts is ERC1155 {
             }
         }
     }
+
+    // proposal functions
+    function submitProposal(string memory _name, string memory url) external returns (uint256) {
+        require(!submittedProposal[msg.sender], "you already submitted a proposal");
+
+        proposalId.increment();
+        uint256 id = proposalId.current();
+        uint256 time = block.timestamp;
+
+        Proposal memory newProposal = Proposal(id, _name, time, url);
+
+        proposals[id] = newProposal;
+        ownerToProposal[msg.sender] = id;
+
+        submittedProposal[msg.sender] = true;
+
+        return id;
+    }
+
+    function approveProposal(uint256 _proposalId, address _marketplace) 
+        external 
+        onlySuperAdmin
+    {
+        approvedProposal[_proposalId] = true;
+
+        uint256 tokenId = _proposalId + 20;
+        
+        // setURI(uint256 tokenId, string memory newuri)
+        setURI(tokenId, proposals[_proposalId].url);
+
+        // _mint(address to, uint256 id, uint256 amount, bytes memory data)
+        _mint(_marketplace, tokenId, 1, "");
+    }
+
+    function getProposalId(address owner) external view returns (uint256) {
+        return ownerToProposal[owner];
+    }
 }
 
 contract NFTMarketplace is ERC1155Holder {
     address private superAdmin;
     address private treasury;
+    
     mapping(uint256 => uint256) balances;
+
     bool locked;
 
     uint256[] nftPrices; //prices should be unit price to 6 decimals
@@ -119,6 +173,7 @@ contract NFTMarketplace is ERC1155Holder {
         treasury = _treasury;
         locked = false;
     }
+
 
     function setNFTSUp(uint256[] memory prices, string[] memory uris)
         external

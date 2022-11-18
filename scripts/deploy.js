@@ -1,25 +1,26 @@
 const main = async () => {
   // all contracts
-  const ManagementContract = await ethers.getContractFactory("NewManagement");
-  const NFTMintingContract = await ethers.getContractFactory("EsgrowNfts");
-  const MarketplaceContract = await ethers.getContractFactory("NFTMarketplace");
-  const ManiTokenContract = await ethers.getContractFactory("MANI");
+  // const ManiTokenContract = await ethers.getContractFactory("MANI");
+  // const ManagementContract = await ethers.getContractFactory("NewManagement");
+  const EsgrowNftsContract = await ethers.getContractFactory("EsgrowNfts");
+  const NFTMarketplace = await ethers.getContractFactory("NFTMarketplace");
+  
 
   const [deployer] = await ethers.getSigners();
 
-  const MANIInstance = await ManiTokenContract.deploy(180);
-  const MarketplaceInstance = await MarketplaceContract.deploy(deployer.address);
-  const ManagementInstance = await ManagementContract.deploy(50, MANIInstance.address, 180, 180);
-  const NftInstance = await NFTMintingContract.deploy();
+  // const MANIInstance = await ManiTokenContract.deploy(180);
+  const MarketplaceInstance = await NFTMarketplace.deploy(deployer.address);
+  // const ManagementInstance = await ManagementContract.deploy(50, MANIInstance.address, 180, 180);
+  const NftInstance = await EsgrowNftsContract.deploy();
 
   // set vote contract
-  await MANIInstance.setVoteContract(ManagementInstance.address);
+  // await MANIInstance.setVoteContract(ManagementInstance.address);
 
   console.log(`Contract Deployed by Account %s \n \n`, deployer.address);
+  // console.log(`Management Contract Address %s`, ManagementInstance.address);
   console.log(`NFTMinting Contract Address %s`, NftInstance.address);
   console.log(`Marketplace Contract address %s`, MarketplaceInstance.address);
-  console.log(`Management Contract Address %s`, ManagementInstance.address);
-  console.log(`MANI Contract Address %s`, MANIInstance.address);
+  // console.log(`MANI Contract Address %s`, MANIInstance.address);
 };
 
 
@@ -36,6 +37,10 @@ const main = async () => {
 // Marketplace Contract address 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707
 // Management Contract Address 0x0165878A594ca255338adfa4d48449f69242Eb8F
 // MANI Contract Address 0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9
+
+// 17th of Nov - Deployment Addresses
+// NFTMinting Contract Address 0x390461c5aefedA29b684392B60c870Edc87b7F4B
+// Marketplace Contract address 0xd3347fF19E0Fe5A1EA8f778757B2F2BF9c275cA6
 
 
 main()

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0
 
-pragma solidity ^0.8.1;
+pragma solidity ^0.8.9;
 
 //proposals
 
@@ -31,52 +31,52 @@ contract Management is KeeperCompatibleInterface, Context {
     }
 
     State state;
-    
+
     string stateUrl;
 
-    uint votingTimeLength;
-    uint proposalTimeLength;
-    uint proposalStartTime;
-    uint voteStartTime;
+    uint256 votingTimeLength;
+    uint256 proposalTimeLength;
+    uint256 proposalStartTime;
+    uint256 voteStartTime;
 
     //events
-    event proposalStarted(uint time);
-    event proposalSubmitted(uint id, address sender);
-    event votingStarted(uint time);
-    event userVoted(uint id, address sender);
-    event userVotedAgain(uint id, address sender);
-    event resultReady(uint time);
-    event finalResult(uint[] result);
+    event proposalStarted(uint256 time);
+    event proposalSubmitted(uint256 id, address sender);
+    event votingStarted(uint256 time);
+    event userVoted(uint256 id, address sender);
+    event userVotedAgain(uint256 id, address sender);
+    event resultReady(uint256 time);
+    event finalResult(uint256[] result);
 
-    uint private maxNumberOfProposals;
+    uint256 private maxNumberOfProposals;
     address private tokenAddress;
     address private manager;
 
     struct Proposal {
-        uint id;
+        uint256 id;
         string name;
         string category;
         string founders;
-        uint amount;
+        uint256 amount;
         address sender;
-        uint time;
+        uint256 time;
     }
 
     IMani mani;
     Proposal proposal;
-    mapping(uint => Proposal) proposals;
+    mapping(uint256 => Proposal) proposals;
     mapping(address => bool) submittedProposal;
-    mapping(uint => uint) voteCount;
-    mapping(uint => bool) isproposal;
+    mapping(uint256 => uint256) voteCount;
+    mapping(uint256 => bool) isproposal;
     mapping(address => bool) voted;
     mapping(address => bool) votedAgain;
     mapping(string => bool) nameExists;
 
     constructor(
-        uint _maxNumbersOfProposals,
+        uint256 _maxNumbersOfProposals,
         address token_Address,
-        uint proposalTimeFrame,
-        uint votingTimeFrame
+        uint256 proposalTimeFrame,
+        uint256 votingTimeFrame
     ) {
         maxNumberOfProposals = _maxNumbersOfProposals;
         mani = IMani(token_Address);
@@ -87,7 +87,7 @@ contract Management is KeeperCompatibleInterface, Context {
         state = State.NOT_STARTED;
     }
 
-    modifier onlyValidIds(uint id) {
+    modifier onlyValidIds(uint256 id) {
         require(isproposal[id], "id is not a proposal");
         _;
     }
@@ -100,7 +100,6 @@ contract Management is KeeperCompatibleInterface, Context {
         _;
     }
 
-
     //@dev to trigger function for contract to start receiving proposals
     function startReceivingProposals() external onlyManager {
         proposalStartTime = block.timestamp;
@@ -108,20 +107,28 @@ contract Management is KeeperCompatibleInterface, Context {
         emit proposalStarted(proposalStartTime);
     }
 
-function checkIfNameExists(string memory _name) external view returns(bool){
-    return(nameExists[_name]);
-}
+    function checkIfNameExists(string memory _name)
+        external
+        view
+        returns (bool)
+    {
+        return (nameExists[_name]);
+    }
 
-function checkIfUserAlreadySubmittedProposal(address _address) external view returns(bool){
-    return(submittedProposal[_address]);
-}
+    function checkIfUserAlreadySubmittedProposal(address _address)
+        external
+        view
+        returns (bool)
+    {
+        return (submittedProposal[_address]);
+    }
 
     function submitProposal(
         string memory _name,
         string memory _category,
         string memory _founders,
-        uint _amount
-    ) external returns (uint) {
+        uint256 _amount
+    ) external returns (uint256) {
         //please ensure string is not empty
         require(state == State.RECEIVING_PROPOSALS, "not receiving proposals");
         require(
@@ -130,12 +137,12 @@ function checkIfUserAlreadySubmittedProposal(address _address) external view ret
         );
         require(!nameExists[_name], "proposal name already exists");
         proposalId.increment();
-        uint id = proposalId.current();
+        uint256 id = proposalId.current();
         require(
             id <= maxNumberOfProposals,
             "maximum numbers of allowed proposals reached"
         );
-        uint time = block.timestamp;
+        uint256 time = block.timestamp;
         Proposal memory newProposal = Proposal(
             id,
             _name,
@@ -153,10 +160,10 @@ function checkIfUserAlreadySubmittedProposal(address _address) external view ret
         return id;
     }
 
-    function voteProposal(uint id) external onlyValidIds(id) returns (bool) {
+    function voteProposal(uint256 id) external onlyValidIds(id) returns (bool) {
         require(state == State.VOTING, "not receiving votes");
         require(!votedAgain[_msgSender()], "you have used up your votes");
-        uint i = 0;
+        uint256 i = 0;
         if (voted[_msgSender()]) {
             votedAgain[_msgSender()] = true;
             i = 2;
@@ -176,11 +183,11 @@ function checkIfUserAlreadySubmittedProposal(address _address) external view ret
         return true;
     }
 
-    function getResult() public view returns (uint[] memory) {
+    function getResult() public view returns (uint256[] memory) {
         require(state == State.RESULT_READY, "not providing results");
-        uint lastProposal = proposalId.current();
-        uint[] memory results = new uint[](lastProposal);
-        for (uint i = 1; i <= lastProposal; ) {
+        uint256 lastProposal = proposalId.current();
+        uint256[] memory results = new uint256[](lastProposal);
+        for (uint256 i = 1; i <= lastProposal; ) {
             // if i = 0, votcount will be 0 also
             results[i] = voteCount[i];
             unchecked {
@@ -190,11 +197,11 @@ function checkIfUserAlreadySubmittedProposal(address _address) external view ret
         return results;
     }
 
-    function getSingleProposalResult(uint id)
+    function getSingleProposalResult(uint256 id)
         public
         view
         onlyValidIds(id)
-        returns (uint)
+        returns (uint256)
     {
         return voteCount[id];
     }
@@ -249,14 +256,14 @@ function checkIfUserAlreadySubmittedProposal(address _address) external view ret
         return state;
     }
 
-    function getlastProposal() external view onlyManager returns (uint) {
+    function getlastProposal() external view onlyManager returns (uint256) {
         return proposalId.current();
     }
 
     function retrieveVoteTokens() external onlyManager {
         require(state == State.RESULT_READY, "voting process not done");
         address[] memory registeredAddresses = mani.getRegisteredAddresses();
-        for (uint i = 0; i <= registeredAddresses.length; ) {
+        for (uint256 i = 0; i <= registeredAddresses.length; ) {
             if (!votedAgain[registeredAddresses[i]]) {
                 if (voted[registeredAddresses[i]]) {
                     if (mani.balanceOf(registeredAddresses[i]) >= 1 ether) {
@@ -308,13 +315,12 @@ function checkIfUserAlreadySubmittedProposal(address _address) external view ret
         emit resultReady(block.timestamp);
         // emit finalResult(getResult());
     }
-    
+
     function setStateUrl(string memory newUrl) external {
         stateUrl = newUrl;
     }
 
-     function getStateUrl() external view returns(string memory){
-       return stateUrl;
+    function getStateUrl() external view returns (string memory) {
+        return stateUrl;
     }
-  
 }

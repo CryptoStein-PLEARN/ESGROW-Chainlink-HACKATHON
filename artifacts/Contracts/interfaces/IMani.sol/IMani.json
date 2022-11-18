@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-artifact-1",
   "contractName": "IMani",
-  "sourceName": "Contracts/interfaces/IMani.sol",
+  "sourceName": "contracts/interfaces/IMani.sol",
   "abi": [
     {
       "anonymous": false,

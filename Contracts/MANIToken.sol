@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.1;
+pragma solidity ^0.8.9;
 
 //@deployed contract 0x00fFD3548725459255f1e78A61A07f1539Db0271
 
@@ -11,11 +11,11 @@ contract MANI is IMani, ERC20, KeeperCompatibleInterface {
     address private voteContract;
     address private superAdmin;
     address[] registeredAddresses;
-    uint registerationTimeFrame;
-    uint registerationStartTime;
+    uint256 registerationTimeFrame;
+    uint256 registerationStartTime;
     mapping(address => bool) public registered;
     bool private locked;
-    uint totalAirDrop;
+    uint256 totalAirDrop;
 
     enum State {
         PRE_REGISTERATION,
@@ -36,7 +36,9 @@ contract MANI is IMani, ERC20, KeeperCompatibleInterface {
         _;
     }
 
-    constructor(uint _registerationTimeFrame) ERC20("MANIFESTATION", "MANI") {
+    constructor(uint256 _registerationTimeFrame)
+        ERC20("MANIFESTATION", "MANI")
+    {
         _mint(msg.sender, 2 ether);
         state = State.PRE_REGISTERATION;
         registerationTimeFrame = _registerationTimeFrame;
@@ -64,7 +66,7 @@ contract MANI is IMani, ERC20, KeeperCompatibleInterface {
 
     function airDropUsers() private lock {
         require(state == State.AIRDROPPING, "not airdropping currently");
-        for (uint i = 0; i < registeredAddresses.length; ) {
+        for (uint256 i = 0; i < registeredAddresses.length; ) {
             _mint(registeredAddresses[i], 2 ether);
             totalAirDrop += 2 ether;
             unchecked {
@@ -106,7 +108,7 @@ contract MANI is IMani, ERC20, KeeperCompatibleInterface {
     }
 
     function withdrawTokens() external onlySuperAdmin {
-        uint contractBalance = balanceOf(address(this));
+        uint256 contractBalance = balanceOf(address(this));
         transfer(superAdmin, contractBalance);
     }
 
@@ -131,7 +133,7 @@ contract MANI is IMani, ERC20, KeeperCompatibleInterface {
         external
         view
         onlySuperAdmin
-        returns (uint)
+        returns (uint256)
     {
         return totalAirDrop;
     }
